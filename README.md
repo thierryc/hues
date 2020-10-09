@@ -30,7 +30,7 @@ Convert {r, g, b, a } object to { h, s, l, a } object.
 
 Convert css color string to an rgba object of float.
 
-```
+```js
 
 str2rgba('#ffffffff')
 
