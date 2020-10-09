@@ -32,8 +32,8 @@ export default [
 		input: 'src/main.js',
 		external: ['ms'],
 		output: [
-			{ file: pkg.main, format: 'cjs', exports: 'default', },
-			{ file: pkg.module, format: 'es', exports: 'default', }
+			{ file: pkg.main, format: 'cjs', exports: 'auto', },
+			{ file: pkg.module, format: 'es', exports: 'auto', }
 		],
 		plugins: [
 			babel({ 
