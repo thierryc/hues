@@ -1,6 +1,8 @@
 {
-  "name": "@ap/hues",
+  "name": "@ap.cx/hues",
   "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
   "main": "dist/hues.cjs.js",
   "module": "dist/hues.esm.js",
   "browser": "dist/hues.umd.js",
