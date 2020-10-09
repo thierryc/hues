@@ -61,7 +61,7 @@ testStr2rgba('rgba(255, 255, 255, 1)', {
 function testRgba2hsla(color, expected) {
 	const hsla = hues.str2rgba(color);
 	assert.deepStrictEqual(hues.rgba2hsla(hsla), expected);
-	console.log(`\u001B[32m✓\u001B[39m ${color} ${JSON.stringify(expected).substring(0, )}`);
+	console.log(`\u001B[32m✓\u001B[39m ${color} ${JSON.stringify(expected).substring(0, 40)}`);
 }
 
 testRgba2hsla('#ffffff', {
@@ -76,4 +76,16 @@ testRgba2hsla('#ff0000', {
 	s: 100,
 	l: 50,
 	a: 1.0,
+});
+
+function testRgb2hsl(color, expected) {
+	const { r, g ,b } = hues.str2rgba(color);
+	assert.deepStrictEqual(hues.rgb2hsl({ r, g ,b }), expected);
+	console.log(`\u001B[32m✓\u001B[39m ${JSON.stringify({ r, g ,b })} ${JSON.stringify(expected).substring(0, 40)}`);
+}
+
+testRgb2hsl('#ff0000', {
+	h: 0,
+	s: 100,
+	l: 50,
 });
