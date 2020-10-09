@@ -3,6 +3,8 @@
   "version": "1.0.1",
   "private": false,
   "license": "MIT",
+  "author": "thierryc",
+  "repository": "thierryc/hues",
   "main": "dist/hues.cjs.js",
   "module": "dist/hues.esm.js",
   "browser": "dist/hues.umd.js",
