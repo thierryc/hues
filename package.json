@@ -25,7 +25,7 @@
     "test": "node test/test.js",
     "pretest": "npm run build",
     "publish": "npm publish --access public",
-    "prepublish": "npm run test"
+    "prepare": "npm run test"
   },
   "files": [
     "dist"
