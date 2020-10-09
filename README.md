@@ -1,11 +1,16 @@
 # hues [HYOOZ]
 
-A color or shade of a color 
+A color or shade of a color.
 
 Hues is the property of colors that makes them distinct from each other, as determined by the dominant wavelength of light — The hue associated with the shortest wavelengths of the visible spectrum is violet.
 
-— The sea has a magical turquoise hue today. 
-- all the hues of the rainbow.
+— The sea has a magical turquoise hue today
+
+- all the hues of the rainbow
+
+## Documentation is in progress
+
+Take a look to the test.js file.
 
 ## rgb2hex
 
@@ -13,7 +18,11 @@ Hues is the property of colors that makes them distinct from each other, as dete
 
 ## rgb2hsl
 
+Convert {r, g, b } object to { h, s, l} object.
+
 ## rgba2hsla
+
+Convert {r, g, b, a } object to { h, s, l, a } object.
 
 ## relativeLuminance
 
