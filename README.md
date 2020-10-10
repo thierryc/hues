@@ -1,6 +1,6 @@
 # hues [HYOOZ]
 
-__The accessibility javascript colors (tiny) tested lib.__
+Hues [HYOOZ] is a very, very simple zero-dependency javascript (tiny) tested colour library built for accessibility, RGBa and HSLa manupulation.
 
 A color or shade of a color.
 
