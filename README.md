@@ -140,18 +140,43 @@ console.log(result);
 
 ```
 
+https://www.topster.net/relative-luminance/
+
 ### WCAG definition of relative luminance
 The relative brightness of any point in a colorspace, normalized to 0 for darkest black and 1 for lightest white.
 
 https://www.w3.org/WAI/GL/wiki/Relative_luminance
 
-## contrast
+## contrast (A11y Contrast)
 
-Compare 2 Relative Luminance.
+Compare 2 Relative Luminance and calculate the Accessibility ratio.
+
+| Text size          | Level AA     | Level AAA    |
+| :----------------- | -----------: | -----------: |
+| small text < 18    |         4.5+ |           7+ |
+| large text >= 18   |           3+ |         4.5+ |
+|                    |              |              |
+
+ Minimum required contrast ratio values
+
 
 ```js
 
-import { contrast } from "@ap.cx/hues";
+import { contrast, relativeLuminance } from "@ap.cx/hues";
+
+const relativeLuminance1 = relativeLuminance({
+  r: 1.0,
+  g: 1.0,
+  b: 1.0,
+  a: 1.0
+});
+
+const relativeLuminance2 = relativeLuminance({
+  r: 0.0,
+  g: 0.0,
+  b: 0.0,
+  a: 0.0
+});
 
 const ratio = contrast(
   relativeLuminance1,
@@ -160,7 +185,7 @@ const ratio = contrast(
 
 console.log(ratio);
 
-> 1
+> 21
 
 ```
 
