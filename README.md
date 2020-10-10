@@ -43,6 +43,16 @@ Take a look to the test.js file.
 
 import { rgb2hex } from "@ap.cx/hues";
 
+const result = rgb2hex({
+  r: 1.0,
+  g: 1.0,
+  b: 1.0,
+});
+
+console.log(result);
+
+> #ffffff
+
 ```
 
 ### rgba2hex
@@ -51,6 +61,17 @@ import { rgb2hex } from "@ap.cx/hues";
 
 import { rgba2hex } from "@ap.cx/hues";
 
+const result = rgba2hex({
+  r: 1.0,
+  g: 1.0,
+  b: 1.0,
+  a: 1.0
+});
+
+console.log(result);
+
+> #ffffffff
+
 ```
 
 ### rgb2hsl
@@ -58,6 +79,20 @@ import { rgba2hex } from "@ap.cx/hues";
 ```js
 
 import { rgb2hsl } from "@ap.cx/hues";
+
+const result = rgb2hsl({
+  r: 1.0,
+  g: 1.0,
+  b: 1.0,
+});
+
+console.log(result);
+
+> {
+  h: 0,
+  s: 0,
+  l: 100,
+}
 
 ```
 
@@ -69,6 +104,22 @@ Convert {r, g, b } object to { h, s, l} object.
 
 import { rgba2hsla } from "@ap.cx/hues";
 
+const result = rgb2hsl({
+  r: 1.0,
+  g: 1.0,
+  b: 1.0,
+  a: 1.0
+});
+
+console.log(result);
+
+> {
+  h: 0,
+  s: 0,
+  l: 100,
+  a: 1,
+}
+
 ```
 
 Convert {r, g, b, a } object to { h, s, l, a } object.
@@ -78,6 +129,59 @@ Convert {r, g, b, a } object to { h, s, l, a } object.
 ```js
 
 import { relativeLuminance } from "@ap.cx/hues";
+
+const result = relativeLuminance({
+  r: 1.0,
+  g: 1.0,
+  b: 1.0,
+  a: 1.0
+});
+
+console.log(result);
+
+> 1
+
+```
+
+### contrast
+
+```js
+
+import { contrast } from "@ap.cx/hues";
+
+const ratio = contrast(relativeLuminance);
+
+console.log(ratio);
+
+> 1
+
+```
+
+### aa
+
+```js
+
+import { aa } from "@ap.cx/hues";
+
+const isAA = aa(ratio); // contrat ratio
+
+console.log(isAA);
+
+> true // or false
+
+```
+
+### aa
+
+```js
+
+import { aa } from "@ap.cx/hues";
+
+const isAAA = aa(ratio); // contrat ratio
+
+console.log(isAAA);
+
+> true // or false
 
 ```
 
@@ -93,9 +197,11 @@ Convert css color string to an rgba object of float.
 
 ```js
 
-str2rgba('#ffffffff')
+const result = str2rgba('#ffffffff')
 
-{
+console.log(result);
+
+> {
 r: 1.0,
 g: 1.0,
 b: 1.0,
