@@ -10,7 +10,7 @@ import relativeLuminance from './relativeLuminance'
 import aa from './aa'
 import aaa from './aaa'
 
-const hues = {
+export {
   str2rgba,
   rgba2hsla,
   rgb2hsl,
@@ -23,5 +23,3 @@ const hues = {
   aa,
   aaa,
 };
-
-export default hues;

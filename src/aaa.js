@@ -1,6 +1,6 @@
 import ratios from './ratios'
 
-function aa(ratio, txtSize = 16, verbose = false) {
+function aaa(ratio, txtSize = 16, verbose = false) {
   // If the ratio is 7 and above, it passes AAA.
   if (ratio >= 4.5 && txtSize >= 18) {
     // large-size font AAA pass
@@ -21,4 +21,4 @@ function aa(ratio, txtSize = 16, verbose = false) {
  * Minimum required contrast ratio values
  */
 
-export default aa;
+export default aaa;
