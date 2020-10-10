@@ -8,9 +8,6 @@
   "main": "dist/hues.cjs.js",
   "module": "dist/hues.esm.js",
   "browser": "dist/hues.umd.js",
-  "dependencies": {
-    "ms": "^2.1.2"
-  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
