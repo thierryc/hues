@@ -1,6 +1,6 @@
 # hues [HYOOZ]
 
-__The accessibility javascript colors (tiny) lib.__
+__The accessibility javascript colors (tiny) tested lib.__
 
 A color or shade of a color.
 
