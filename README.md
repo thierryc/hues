@@ -1,6 +1,49 @@
 # hues [HYOOZ]
 
-Hues [HYOOZ] is a very, very simple zero-dependency javascript (tiny) tested colour library built for accessibility, RGBa and HSLa manupulation.
+Hues [HYOOZ] is a very simple __zero-dependency__ javascript (tiny) tested colour library built for accessibility, RGBa and HSLa manupulation.
+
+## How to install
+
+```shell
+
+npm install --save @ap.cx/hues
+
+or 
+
+yarn add @ap.cx/hues
+
+```
+
+## How to use
+
+```js
+
+import * as hues from "@ap.cx/hues";
+
+import str2rgba from "@ap.cx/hues";
+
+```
+or
+
+```js
+
+const {
+  str2rgba,
+  rgba2hsla,
+  rgb2hsl,
+  hsla2rgba,
+  hsl2rgb,
+  rgba2hex,
+  rgb2hex,
+  contrast,
+  relativeLuminance,
+  aa,
+  aaa,
+} = require("@ap.cx/hues");
+
+```
+
+## hues [HYOOZ] definition
 
 A color or shade of a color.
 
