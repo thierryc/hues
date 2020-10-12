@@ -176,4 +176,12 @@ testAAA('#00ff00', '#000000', true);
 testAAA('#0000ff', '#ffffff', true);
 testAAA('#0000ff', '#000000', false);
 
+
+function testRgb2hex(rgba, expected) {
+	assert.strictEqual(rgb2hex(rgba), expected);
+	console.log(`\u001B[32m✓\u001B[39m rgb2hex ${expected}`);
+}
+
+testRgb2hex({ r: 1, g: 1, b: 1, a: 1 }, '#ffffff');
+
 // https://www.topster.net/relative-luminance/
