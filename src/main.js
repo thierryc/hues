@@ -9,6 +9,7 @@ import contrast from './contrast'
 import relativeLuminance from './relativeLuminance'
 import aa from './aa'
 import aaa from './aaa'
+import hslaVector3 from './hslaVector3'
 
 export {
   str2rgba,
@@ -22,4 +23,5 @@ export {
   relativeLuminance,
   aa,
   aaa,
+  hslaVector3,
 };

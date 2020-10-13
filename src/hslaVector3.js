@@ -1,7 +1,7 @@
-function hslVector3 ({ h, s, l }, v3) {
+function hslaVector3 ({ h, s, l, a }, v3) {
   const hv = v3[0];
-  const sv = v3[0];
-  const lv = v3[0];
+  const sv = v3[1];
+  const lv = v3[2];
 
   let h1 = ((h + hv) % 360);
   if (h1 < 0) {
@@ -11,7 +11,7 @@ function hslVector3 ({ h, s, l }, v3) {
   let s1 = Math.min(s + sv, 100); // caping 100;
   let l1 = Math.min(l + lv, 100); // caping 100;
 
-  return { h: h1, s: s1, l: l1};
+  return { h: h1, s: s1, l: l1, a};
 }
 
-export default hslVector3;
+export default hslaVector3;

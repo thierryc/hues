@@ -303,7 +303,7 @@ Relative luminance follows the photometric definition of luminance, but with the
 Web Content Accessibility Guidelines(WCAG) is developed by W3C WAI (The World Wide Web Consortium Web Accessibility Initiative) with a goal of providing a single shared standard for web content accessibility. The WCAG documents explain how to make web content more accessible to people with visual, auditory, physical, speech, cognitive, language, learning, and neurological disabilities.
 
 
-## Small 
+## npm publish --access public 
 
 ```txt
 📦  @ap.cx/hues@2.0.1
