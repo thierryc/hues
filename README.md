@@ -281,9 +281,30 @@ r: 1.0,
 g: 1.0,
 b: 1.0,
 a: 1.0,
-});
+}
 
 ```
+
+## hslaVector3
+
+```js
+
+import { hslaVector3 } from "@ap.cx/hues";
+
+```
+
+change hsl value.
+
+```js
+
+const result = hslaVector3({ h: 0, s: 90, l: 90, a: 1 }, [0,0,1])
+
+console.log(result);
+
+> { h: 0, s: 90, l: 91, a: 1 };
+
+```
+
 ---
 
 ## color-string

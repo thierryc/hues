@@ -8,8 +8,8 @@ function hslaVector3 ({ h, s, l, a }, v3) {
     h1 += 360;
   }
 
-  let s1 = Math.min(s + sv, 100); // caping 100;
-  let l1 = Math.min(l + lv, 100); // caping 100;
+  let s1 = Math.min(Math.max(s + sv, 0), 100); // caping 0, 100;
+  let l1 = Math.min(Math.max(l + lv, 0), 100); // caping 0, 100;
 
   return { h: h1, s: s1, l: l1, a};
 }

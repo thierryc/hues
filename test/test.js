@@ -10,7 +10,8 @@ const {
   contrast,
   relativeLuminance,
   aa,
-  aaa,
+	aaa,
+	hslaVector3,
 } = require('..');
 
 /* function MockHues () {
@@ -186,5 +187,12 @@ testRgb2hex({ r: 1, g: 1, b: 1, a: 1 }, '#ffffff');
 
 // https://www.topster.net/relative-luminance/
 
+function testHslaVector3(hsla, v3, expected) {
+	assert.deepStrictEqual(hslaVector3(hsla, v3), expected);
+	console.log(`\u001B[32m✓\u001B[39m hslaVector3 ${expected}`);
+}
 
-
+testHslaVector3({ h: 0, s: 90, l: 90, a: 1 }, [0,0,1], { h: 0, s: 90, l: 91, a: 1 });
+testHslaVector3({ h: 0, s: 90, l: 90, a: 1 }, [-1,0,1], { h: 359, s: 90, l: 91, a: 1 });
+testHslaVector3({ h: 0, s: 90, l: 90, a: 1 }, [0,0,100], { h: 0, s: 90, l: 100, a: 1 });
+testHslaVector3({ h: 0, s: 10, l: 90, a: 1 }, [0,-11,100], { h: 0, s: 0, l: 100, a: 1 });
