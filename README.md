@@ -1,6 +1,8 @@
-# hues [HYOOZ]
+# hues [HYOOZ] 
 
 Hues [HYOOZ] is a very simple __zero-dependency__ javascript (tiny) tested colour library built for accessibility, RGBa and HSLa manupulation.
+
+Color Hues, Tints, Shades, and Tones, Hues is just another word for colors. 🙃
 
 ## How to install
 
@@ -57,17 +59,18 @@ This small lib is about RGBa and HSLa colors and Accessibility (AA, AAA).
 
 ## Functions
 
-- str2rgba,
-- rgba2hsla,
-- rgb2hsl,
-- hsla2rgba,
-- hsl2rgb,
-- rgba2hex,
-- rgb2hex,
-- contrast,
-- relativeLuminance,
-- aa,
-- aaa,
+- [str2rgba](#str2rgba),
+- [rgba2hsla](#rgba2hsla),
+- [rgb2hsl](#rgb2hsl),
+- [hsla2rgba](#hsla2rgba),
+- [hsl2rgb](#hsl2rgb),
+- [rgba2hex](#rgba2hex),
+- [rgb2hex](#rgb2hex),
+- [contrast](#contrast),
+- [relativeLuminance](#relativeLuminance),
+- [aa](#aa),
+- [aaa](#aaa),
+- [hslaVector3](#hslaVector3)
 
 ### SOON 
 
