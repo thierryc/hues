@@ -22,6 +22,12 @@ yarn add @ap.cx/hues
 
 import * as hues from "@ap.cx/hues";
 
+```
+
+or one by one ...
+
+```js
+
 import str2rgba from "@ap.cx/hues";
 
 ```
@@ -325,6 +331,35 @@ Relative luminance follows the photometric definition of luminance, but with the
 ## What is WCAG
 
 Web Content Accessibility Guidelines(WCAG) is developed by W3C WAI (The World Wide Web Consortium Web Accessibility Initiative) with a goal of providing a single shared standard for web content accessibility. The WCAG documents explain how to make web content more accessible to people with visual, auditory, physical, speech, cognitive, language, learning, and neurological disabilities.
+
+
+
+## get code 
+
+### https
+
+```shell
+
+git clone https://github.com/thierryc/hues.git
+
+```
+
+### SSH
+
+```shell
+
+git clone git@github.com:thierryc/hues.git
+
+```
+
+
+### gh (github official cli)
+
+```shell
+
+gh repo clone thierryc/hues
+
+```
 
 
 ## npm publish --access public 
