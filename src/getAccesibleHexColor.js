@@ -25,7 +25,7 @@ function getAccesibleHexColor(rgba, background, ratio) {
     );
     // to get a consistant Accesible hex value str2rgba( rgba2hex(result)).
     r = contrast( relativeLuminance( str2rgba( rgba2hex(result) ) ), relativeLuminance(background) );
-  } while ((Math.round(r * 10) / 10) < ratio);
+  } while ((Math.round(r * 10) / 10) <= ratio);
   return result;
 }
 
