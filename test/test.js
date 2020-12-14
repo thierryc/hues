@@ -12,6 +12,8 @@ const {
   aa,
 	aaa,
 	hslaVector3,
+	getAccesibleHexColor,
+	ratios,
 } = require('..');
 
 /* function MockHues () {
@@ -91,6 +93,21 @@ testRgba2hsla('#ff0000', {
 	a: 1.0,
 });
 
+testRgba2hsla('#2C4F87', {
+	h: 216.92307692307693,
+  s: 50.837988826815646,
+  l: 35.09803921568627,
+	a: 1.0,
+});
+
+testRgba2hsla('#1CB674', {
+	h: 154.28571428571428,
+  s: 73.33333333333336,
+  l: 41.17647058823529,
+	a: 1.0,
+});
+
+
 function testRgb2hsl(color, expected) {
 	const {r, g, b} = str2rgba(color);
 	assert.deepStrictEqual(rgb2hsl({r, g, b}), expected);
@@ -125,6 +142,8 @@ testRelativeLuminance('#000', 0);
 testRelativeLuminance('#ccc', 0.6038273388553377);
 testRelativeLuminance('#ffffff00', 0);
 testRelativeLuminance('#ff0000ff', 0.2126);
+testRelativeLuminance('#5475f7', 0.2132279767305525);
+testRelativeLuminance('#161616', 0.008023192985384994);
 
 function testContrast(c1, c2, expected) {
 	const rgba1 = str2rgba(c1);
@@ -141,7 +160,10 @@ testContrast('#00ff00', '#ffffff', 1.3721902770517513);
 testContrast('#00ff00', '#000000', 15.303999999999998);
 testContrast('#0000ff', '#ffffff', 8.592471358428805);
 testContrast('#0000ff', '#000000', 2.444);
-
+testContrast('#5274F7', '#161616', 4.480970389012467);
+testContrast('#5274F7', '#0a0a0a', 4.902401938369846);
+testContrast('#5274F7', '#000000', 5.20000419286932);
+testContrast('#5475f7', '#161616', 4.536599300849487);
 
 function testAA(c1, c2, expected) {
 	const rgba1 = str2rgba(c1);
@@ -196,3 +218,18 @@ testHslaVector3({ h: 0, s: 90, l: 90, a: 1 }, [0,0,1], { h: 0, s: 90, l: 91, a: 
 testHslaVector3({ h: 0, s: 90, l: 90, a: 1 }, [-1,0,1], { h: 359, s: 90, l: 91, a: 1 });
 testHslaVector3({ h: 0, s: 90, l: 90, a: 1 }, [0,0,100], { h: 0, s: 90, l: 100, a: 1 });
 testHslaVector3({ h: 0, s: 10, l: 90, a: 1 }, [0,-11,100], { h: 0, s: 0, l: 100, a: 1 });
+
+
+function testGetAccesibleHexColor(hex, background, expected) {
+	const rgba = str2rgba(hex);
+	const bg = str2rgba(background);
+	assert.deepStrictEqual(getAccesibleHexColor(rgba, bg, ratios['AA'].minRatio), expected);
+	console.log(`\u001B[32m✓\u001B[39m getAccesibleHexColor ${expected} ${rgb2hex(expected)}`);
+}
+
+testGetAccesibleHexColor('#051b71', '#161616', {
+	r: 0.3322897972748431,
+	g: 0.46228647391159927,
+	b: 0.9704553007643733,
+	a: 1
+});

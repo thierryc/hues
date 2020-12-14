@@ -10,6 +10,8 @@ import relativeLuminance from './relativeLuminance'
 import aa from './aa'
 import aaa from './aaa'
 import hslaVector3 from './hslaVector3'
+import getAccesibleHexColor from './getAccesibleHexColor'
+import ratios from './ratios'
 
 export {
   str2rgba,
@@ -24,4 +26,6 @@ export {
   aa,
   aaa,
   hslaVector3,
+  getAccesibleHexColor,
+  ratios,
 };

@@ -11,6 +11,18 @@ const ratios = {
     description: '(WCAG AAA, normal text)',
     minRatio: 7,
   },
+  'AA-large': {
+    description: '(WCAG AA, large text)',
+    minRatio: 3,
+  },
+  'AA': {
+    description: '(WCAG AA, normal text)',
+    minRatio: 4.5,
+  },
+  'AAA': {
+    description: '(WCAG AAA, normal text)',
+    minRatio: 7,
+  }
 };
 
 export default ratios;
